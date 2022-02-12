@@ -22,17 +22,17 @@ For example, this one round of play using [Wordle Game](https://wordlegame.org/)
 
 ## First Guess: TEARS
 
-Wordle gives back <span style="grey">T<span><span style="yellow">E<span><span style="grey">A<span><span style="grey">R<span><span style="grey">S<span>. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s)`
+Wordle gives back  Grey T, Yellow E, Grey A, Grey R, Grey S. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s)`
 
 After running the function you will get back all guesses, plus a set of suggestions for the next best guess. Always choose from the best guesses until that list is exhaused, then start choosing from the list of all remaining.
 
 ## Second Guess: LINED
 
-Wordle gives back <span style="yellow">L<span><span style="grey">I<span><span style="grey">N<span><span style="yellow">E<span><span style="grey">D<span>. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s !1l !i !n !4e !d)`
+Wordle gives back Yellow L, Grey I, Grey N, Yellow E, Grey D. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s !1l !i !n !4e !d)`
 
 ## Third Guess: PLUME
 
-Wordle gives back <span style="grey">P<span><span style="green">L<span><span style="green">U<span><span style="green">M<span><span style="green">E<span>. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s !1l !i !n !4e !d !p 2l 3u 4m 5e)`
+Wordle gives back Grey P, Green L, Green U, Green M, Green E. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s !1l !i !n !4e !d !p 2l 3u 4m 5e)`
 
 ## Fourth Guess: FLUME
 
