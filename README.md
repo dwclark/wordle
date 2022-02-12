@@ -10,7 +10,7 @@ Compile and load the `wordle.lisp` file. The easiest way to to start SLIME in em
 
 # Making Guesses
 
-After making a guess use the color coded hints from wordle to encode which guesses you have made. Each symbol you give to `play-wordle` can have have an exclamation point, a number, and a letter, always in that order. Though, you do not have to input all of those items. The letter is always the letter your guessed, the number is the position of the letter, and the exclamation point negates the condition. As an example, let's assume you entered the letter 'r' in the fourth position (position counts start from 1).
+After making a guess use the color coded hints from wordle to encode which guesses you have made. Each symbol you give to `play-wordle` can have have an exclamation point, a number, and a letter, always in that order. However, you do not have to use all of those items. The letter is always the letter your guessed, the number is the position of the letter, and the exclamation point negates the condition. As an example, let's assume you entered the letter 'r' in the fourth position (position counts start from 1).
 
 * If the 'r' is green, you would encode that as `4r` (there is an 'r' in the fourth position)
 * If the 'r' is yellow, you would encode that as `!4r` (there is an 'r', but not in the fourth position)
@@ -18,7 +18,7 @@ After making a guess use the color coded hints from wordle to encode which guess
 
 # Sample Game
 
-For example, this one round of play using [Wordle Game](https://wordlegame.org/)
+For example, this is one round of play using [Wordle Game](https://wordlegame.org/)
 
 ## First Guess: TEARS
 
