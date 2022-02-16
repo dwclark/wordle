@@ -4,9 +4,13 @@ Contains common lisp functions to help in solving wordle puzzles. Play wordle li
 
 # Using the Wordle Solver/Helper
 
-Compile and load the `wordle.lisp` file. The easiest way to to start SLIME in emacs, load `wordle.lisp` into a buffer, and then hit `C-c C-k` in the buffer. Then in the slime terminal you can run the solver/helper like this:
+Compile and load the `wordle.lisp` file. The easiest way to to start SLIME in emacs, load `wordle.lisp` into a buffer, and then hit `C-c C-k` in the buffer. To load the dictionary and analyze letter frequencies enter this at the REPL:
 
-```(play-wordle "wordle.txt" <put guesses here>)```
+```(words-from "wordle.txt")```
+
+Then in at the REPL you can run the solver/helper like this:
+
+```(play-wordle <put guesses here>)```
 
 # Making Guesses
 
@@ -22,17 +26,17 @@ For example, this is one round of play using [Wordle Game](https://wordlegame.or
 
 ## First Guess: TEARS
 
-Wordle gives back  Grey T, Yellow E, Grey A, Grey R, Grey S. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s)`
+Wordle gives back  Grey T, Yellow E, Grey A, Grey R, Grey S. This gets encoded as `(play-wordle !t !2e !a !r !s)`
 
-After running the function you will get back all guesses, plus a set of suggestions for the next best guess. Always choose from the best guesses until that list is exhaused, then start choosing from the list of all remaining.
+After running the function you will get back all guesses, plus a set of suggestions for the next best guess. Always choose from the best guesses until that list is exhausted, then start choosing from the list of all remaining.
 
 ## Second Guess: LINED
 
-Wordle gives back Yellow L, Grey I, Grey N, Yellow E, Grey D. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s !1l !i !n !4e !d)`
+Wordle gives back Yellow L, Grey I, Grey N, Yellow E, Grey D. This gets encoded as `(play-wordle !t !2e !a !r !s !1l !i !n !4e !d)`
 
 ## Third Guess: PLUME
 
-Wordle gives back Grey P, Green L, Green U, Green M, Green E. This gets encoded as `(play-wordle "wordle.txt" !t !2e !a !r !s !1l !i !n !4e !d !p 2l 3u 4m 5e)`
+Wordle gives back Grey P, Green L, Green U, Green M, Green E. This gets encoded as `(play-wordle !t !2e !a !r !s !1l !i !n !4e !d !p 2l 3u 4m 5e)`
 
 ## Fourth Guess: FLUME
 
